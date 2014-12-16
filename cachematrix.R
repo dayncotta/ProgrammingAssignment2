@@ -86,7 +86,8 @@ cacheSolve <- function(x, ...)      ## accept list object 'x' corresponding to a
   
   m <- x$get_matrix()               ## fetch matrix value from object 'x'
                                     ## and store in 'm'
-  if(det(m)==0)
+  
+  if(det(m)==0)                     ## Test if matrix is not invertible.
   {
     i<-"The matrix is not invertible"
     x$set_inv(i)
